@@ -1,0 +1,72 @@
+INSERT INTO users (email, password, type) 
+VALUES ('fred@turkjohnson.com', SHA('test1'), 0),
+('ucabftj@ucl.ac.uk', SHA('test1'), 1),
+('test@sell.com', SHA('test1'), 1),
+('test@buy.com', SHA('test1'), 0),
+("andrew.o'connell.20@ucl.ac.uk", SHA('test1'), 0);
+
+INSERT INTO listings (user_id, posttime, endtime, itemdescription, item_title, category, reserveprice, startprice)
+VALUES ('1', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'Brand new car', 'CAT013', '15000', '10000'), 
+('3', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'Vintage ECC83 Pre Amp /Summing Mixer', 'CAT015', '1000', '750'), 
+('2', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 4 DAY), 'Lorem Ipsum Lorem Ipsum', 'Natuzzi "Love Seat"', 'CAT001', '350', '300'),
+('2', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'British Eagle Hybrid Bicycle - Medium', 'CAT023', '100', '75'),
+('2', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'IKEA mahogany slim bookshelf, wooden, 178 x 52 x 40 cm', 'CAT001', '20', '14'),
+('3', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 6 DAY), 'Lorem Ipsum Lorem Ipsum', 'Huawei watch 2 sports black excellent condition rarely worn with box and all accessories', 'CAT002', '150', '120'),
+('3', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'Apple EarPods with 3.5mm Headphone Plug', 'CAT011', '15', '10'),
+('3', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'Solid Wood side tables x 2', 'CAT001', '20', '15'),
+('2', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'ASKVOLL Wardrobe, white stained oak effect, white - white stained oak effect/white', 'CAT001', '60', '50'),
+('3', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'Large TV Media Storage Unit.TV Stand. Fits Up To 55 inch TV. (Light Oak)', 'CAT016', '50', '45'),
+('2', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'Coffee Table', 'CAT001', '45', '30'),
+('3', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 7 DAY), 'Lorem Ipsum Lorem Ipsum', '* BOARDMAN HYB 8.6 * HYBRID / ROAD BIKE / BICYCLE', 'CAT023', '295', '250'),
+('2', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'Single metal white loft bed', 'CAT001', '60', '50'),
+('3', CURRENT_TIMESTAMP(), ADDDATE(CURRENT_TIMESTAMP(), INTERVAL 3 DAY), 'Lorem Ipsum Lorem Ipsum', 'Apple iMac Slim 27 inch i5 Quad Core 2.9Ghz 24gb Ram 1TB HDD Cinema 4D Vectorworks Adobe Dimension', 'CAT010', '900', '850');
+
+INSERT INTO bids (user_id, listing_id, bidtime, bidprice, notified)
+VALUES
+('4' , '1' , CURRENT_TIMESTAMP() , '11000' , 0),
+('1' , '2' , CURRENT_TIMESTAMP() , '1045' , 0),
+('1' , '3' , CURRENT_TIMESTAMP() , '400' , 0),
+('4' , '4' , CURRENT_TIMESTAMP() , '150' , 0),
+('4' , '5' , CURRENT_TIMESTAMP() , '20' , 0),
+('1' , '6' , CURRENT_TIMESTAMP() , '150' , 0),
+('5' , '7' , CURRENT_TIMESTAMP() , '15', 0),
+('1' , '8' , CURRENT_TIMESTAMP() , '30' , 0),
+('1' , '9' , CURRENT_TIMESTAMP() , '70' , 0),
+('1' , '10' , CURRENT_TIMESTAMP() , '55' , 0),
+('5' , '11' , CURRENT_TIMESTAMP() , '45' , 0),
+('5' , '12' , CURRENT_TIMESTAMP() , '375' , 0),
+('4' , '1' , CURRENT_TIMESTAMP() , '12000' , 0),
+('5' , '2' , CURRENT_TIMESTAMP() , '1050' , 0),
+('1' , '3' , CURRENT_TIMESTAMP() , '420' , 0),
+('5' , '4' , CURRENT_TIMESTAMP() , '160' , 0),
+('1' , '5' , CURRENT_TIMESTAMP() , '30' , 0),
+('1' , '6' , CURRENT_TIMESTAMP() , '165' , 0),
+('1' , '7' , CURRENT_TIMESTAMP() , '19' , 0),
+('4' , '8' , CURRENT_TIMESTAMP() , '43' , 0);
+
+INSERT INTO categories 
+VALUES ('CAT001', 'Home'),
+('CAT002', 'Clothes'),
+('CAT003', 'Kids'),
+('CAT004', 'Sports'),
+('CAT005', 'Office '),
+('CAT006', 'Miscellaneous'),
+('CAT007', 'Cameras'),
+('CAT008', 'Appliances'),
+('CAT009', 'Phones'),
+('CAT010', 'Computers'),
+('CAT011', 'Music'),
+('CAT012', 'Health'),
+('CAT013', 'Cars'),
+('CAT014', 'DIY'),
+('CAT015', 'Stereos'),
+('CAT016', 'TVs'),
+('CAT017', 'Consoles'),
+('CAT018', 'Outdoors'),
+('CAT019', 'Tickets'),
+('CAT020', 'Leisure'),
+('CAT021', 'Films'),
+('CAT022', 'Books'),
+('CAT023', 'Bicycles');
+
+
