@@ -1,0 +1,36 @@
+CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, 
+email TEXT, 
+password TEXT, 
+type BOOLEAN,                    
+PRIMARY KEY(id));
+
+CREATE TABLE listings (listing_id INT NOT NULL AUTO_INCREMENT, 
+user_id INT, 
+posttime datetime NOT NULL, 
+endtime DATETIME, 
+itemdescription TEXT,
+item_title TEXT,  
+category TEXT, 
+reserveprice DECIMAL(10,2), 
+startprice DECIMAL(10,2), 
+PRIMARY KEY(listing_id), 
+FOREIGN KEY(user_id) REFERENCES users(id));
+
+CREATE TABLE bids (bid_id INT NOT NULL AUTO_INCREMENT, 
+user_id INT, 
+listing_id INT,
+bidtime DATETIME,   
+bidprice DECIMAL(10,2), 
+notified BOOLEAN NOT NULL DEFAULT FALSE,
+PRIMARY KEY(bid_id), 
+FOREIGN KEY(listing_id) REFERENCES listings(listing_id), 
+FOREIGN KEY(user_id) REFERENCES users(id));
+
+CREATE TABLE watchlist (user_id INT, 
+listing_id INT,
+FOREIGN KEY(user_id) REFERENCES users(id),
+FOREIGN KEY(listing_id) REFERENCES listings(listing_id));
+
+CREATE TABLE categories (catID VARCHAR(10), 
+name TINYTEXT, 
+PRIMARY KEY(catID));
