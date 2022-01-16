@@ -21,7 +21,7 @@ This website allows the user to sign up as a seller or buyer, giving them capabi
 4. Upload ```DummyData.txt``` as dummy data for the database.
 
 ## Built With
-- Javascript/HTML
+- Javascript/HTML/CSS
 - Bootstrap
 - PHP
 - SQL
