@@ -1,5 +1,5 @@
 # Happy-Auction-House
-An online auction website emulating the functionality of (budget) eBay. 
+An online auction website emulating the functionality of eBay. 
 
 ## Background
 This website allows the user to sign up as a seller or buyer, giving them capabilities to search, auction, and bid on items. As a database focused project, this demanded a good understanding of database concepts including database design, entity relationship modelling (cardinality & modality), database normalization, and SQL queries. 
